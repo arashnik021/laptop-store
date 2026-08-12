@@ -2,17 +2,13 @@ const imageSet = (category, slug, count = 3) =>
   Array.from(
     { length: count },
     (_, index) =>
-      `/images/products/${category}/${slug}-${index + 1}.png`
+      `${import.meta.env.BASE_URL}images/products/${category}/${slug}-${index + 1}.png`,
   );
 
 const createProduct = (item) => ({
   ...item,
   images: imageSet(item.category, item.slug),
-  tags: item.tags || [
-    item.specs.cpu,
-    item.specs.ram,
-    item.specs.storage,
-  ],
+  tags: item.tags || [item.specs.cpu, item.specs.ram, item.specs.storage],
 });
 
 export const products = [
@@ -70,7 +66,7 @@ export const products = [
       weight: "2.25 کیلوگرم",
       battery: "53.5Wh",
       operatingSystem: "Windows 11 Home",
-      },
+    },
     availability: true,
     isNew: true,
     isBestSeller: false,
@@ -190,7 +186,7 @@ export const products = [
       gpu: "NVIDIA GeForce RTX 4050 Laptop GPU 6GB",
       weight: "2.31 کیلوگرم",
       battery: "70Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
@@ -221,7 +217,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.62 کیلوگرم",
       battery: "47Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
@@ -252,7 +248,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.70 کیلوگرم",
       battery: "3 سلولی 42Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
@@ -282,7 +278,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.41 کیلوگرم",
       battery: "3 سلولی 43Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: true,
@@ -313,7 +309,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.77 کیلوگرم",
       battery: "3 سلولی 50Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
@@ -343,7 +339,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.56 کیلوگرم",
       battery: "42Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: false,
     isNew: false,
@@ -374,7 +370,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.43 کیلوگرم",
       battery: "57Wh",
-      operatingSystem: "Windows 11 Pro"
+      operatingSystem: "Windows 11 Pro",
     },
     availability: true,
     isNew: true,
@@ -404,7 +400,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.39 کیلوگرم",
       battery: "3 سلولی 54Wh",
-      operatingSystem: "Windows 11 Pro"
+      operatingSystem: "Windows 11 Pro",
     },
     availability: true,
     isNew: false,
@@ -435,7 +431,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.79 کیلوگرم",
       battery: "3 سلولی 51Wh",
-      operatingSystem: "Windows 11 Pro"
+      operatingSystem: "Windows 11 Pro",
     },
     availability: true,
     isNew: false,
@@ -465,7 +461,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.69 کیلوگرم",
       battery: "42Wh",
-      operatingSystem: "Windows 11 Pro"
+      operatingSystem: "Windows 11 Pro",
     },
     availability: true,
     isNew: false,
@@ -495,7 +491,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.58 کیلوگرم",
       battery: "64Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
@@ -525,7 +521,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.70 کیلوگرم",
       battery: "71Wh",
-      operatingSystem: "Windows 11 Pro"
+      operatingSystem: "Windows 11 Pro",
     },
     availability: true,
     isNew: true,
@@ -556,7 +552,7 @@ export const products = [
       gpu: "Intel Arc Graphics",
       weight: "1.20 کیلوگرم",
       battery: "75Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: true,
@@ -586,7 +582,7 @@ export const products = [
       gpu: "Intel Graphics",
       weight: "1.57 کیلوگرم",
       battery: "54Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: false,
     isNew: true,
@@ -616,7 +612,7 @@ export const products = [
       gpu: "Apple 14-core GPU",
       weight: "1.61 کیلوگرم",
       battery: "72.4Wh",
-      operatingSystem: "macOS Sequoia"
+      operatingSystem: "macOS Sequoia",
     },
     availability: true,
     isNew: true,
@@ -646,7 +642,7 @@ export const products = [
       gpu: "NVIDIA GeForce RTX 4050 Laptop GPU 6GB",
       weight: "1.92 کیلوگرم",
       battery: "86Wh",
-      operatingSystem: "Windows 11 Pro"
+      operatingSystem: "Windows 11 Pro",
     },
     availability: true,
     isNew: false,
@@ -676,7 +672,7 @@ export const products = [
       gpu: "NVIDIA GeForce RTX 4070 Laptop GPU 8GB",
       weight: "2.40 کیلوگرم",
       battery: "90Wh",
-      operatingSystem: "Windows 11 Pro"
+      operatingSystem: "Windows 11 Pro",
     },
     availability: true,
     isNew: false,
@@ -706,7 +702,7 @@ export const products = [
       gpu: "NVIDIA GeForce RTX 4050 Laptop GPU 6GB",
       weight: "2.26 کیلوگرم",
       battery: "4 سلولی 53.5Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: false,
     isNew: false,
@@ -737,7 +733,7 @@ export const products = [
       gpu: "Apple 10-core GPU",
       weight: "1.24 کیلوگرم",
       battery: "52.6Wh",
-      operatingSystem: "macOS Sequoia"
+      operatingSystem: "macOS Sequoia",
     },
     availability: true,
     isNew: true,
@@ -766,8 +762,8 @@ export const products = [
       gpu: "Apple 10-core GPU",
       weight: "1.51 کیلوگرم",
       battery: "66.5Wh",
-      operatingSystem: "macOS Sequoia"
-  },
+      operatingSystem: "macOS Sequoia",
+    },
     availability: true,
     isNew: true,
     isBestSeller: false,
@@ -795,7 +791,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.56 کیلوگرم",
       battery: "76Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
@@ -825,7 +821,7 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.26 کیلوگرم",
       battery: "60Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
@@ -855,8 +851,8 @@ export const products = [
       gpu: "Intel Iris Xe Graphics",
       weight: "1.25 کیلوگرم",
       battery: "65Wh",
-      operatingSystem: "Windows 11 Home"
-  },
+      operatingSystem: "Windows 11 Home",
+    },
     availability: true,
     isNew: true,
     isBestSeller: false,
@@ -885,7 +881,7 @@ export const products = [
       gpu: "AMD Radeon 610M",
       weight: "1.65 کیلوگرم",
       battery: "3 سلولی 38Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
@@ -914,7 +910,7 @@ export const products = [
       gpu: "AMD Radeon Graphics (Radeon Vega 6)",
       weight: "1.74 کیلوگرم",
       battery: "3 سلولی 41Wh",
-      operatingSystem: "Windows 11 Home"
+      operatingSystem: "Windows 11 Home",
     },
     availability: true,
     isNew: false,
