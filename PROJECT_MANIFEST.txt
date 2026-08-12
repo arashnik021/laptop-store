@@ -1,0 +1,10 @@
+./.gitignore
+./PROJECT_MANIFEST.txt
+./README.md
+./index.html
+./package-lock.json
+./package.json
+./public/favicon.svg
+./src/App.jsx
+./src/main.jsx
+./vite.config.js
